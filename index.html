@@ -11,20 +11,25 @@
 </head>
 
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Your PG Name</a>
-            <ul class="nav-links">
-               <li><a href="index.html#home">Home</a></li>
+   <!-- Navigation Bar -->
+<nav class="navbar">
+    <div class="container">
+        <a href="index.html" class="logo">Your PG Name</a>
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links">
+            <li><a href="index.html#home">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="locations.html">Locations</a></li>
             <li><a href="amenities.html">Amenities</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="index.html#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+        </ul>
+    </div>
+</nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -36,12 +41,26 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>With over 20 years of experience, we provide safe, comfortable, and affordable PG accommodations in Navrangpura and CG Road. Our focus is on creating a home-like environment for students and working professionals.</p>
+<section id="about" class="about">
+    <div class="container">
+        <h2>About</h2>
+        <div class="about-card">
+            <div class="card-content">
+                <h3>Over 20 Years of Excellence</h3>
+                <p>
+                    With over 20 years of experience, we provide <strong>safe, comfortable, and affordable</strong> PG accommodations in <strong>Navrangpura and CG Road</strong>. Our focus is on creating a <strong>home-like environment</strong> for students and working professionals.
+                </p>
+                <p>
+                    We believe in fostering a community where residents feel at home. Our PGs are designed to provide a perfect balance of privacy, comfort, and convenience.
+                </p>
+            </div>
+            <div class="card-image">
+                <img src="images/about-pg.jpg" alt="Our PG Accommodation" loading="lazy">
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Locations Section -->
     <section id="locations" class="locations">
@@ -151,25 +170,10 @@
 
 
     
+
 <!-- Back to Top Button -->
 <button id="back-to-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></button>
 
-<!-- JavaScript for Back to Top Button -->
-<script>
-  const backToTopButton = document.getElementById('back-to-top');
-
-  window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.classList.add('show');
-    } else {
-      backToTopButton.classList.remove('show');
-    }
-  });
-
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
 
 </body>
 </html>
