@@ -126,7 +126,9 @@ body {
 .hero-content h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: white; /* Ensures high contrast */
+    color: white; 
+    
+    /* Ensures high contrast */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
@@ -155,6 +157,140 @@ body {
     background: #e86f51;
     transform: translateY(-3px) translateZ(5px);
     box-shadow: 0 8px 25px rgba(255, 126, 95, 0.6);
+}
+/* Navigation Bar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled {
+    background: rgba(67, 97, 238, 0.9);
+    padding: 0.5rem 1rem;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.navbar.scrolled .logo {
+    color: white;
+}
+
+/* Hamburger Menu */
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 1.5rem;
+    z-index: 1001;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background: white;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-color);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .nav-links a {
+    color: white;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: rgba(67, 97, 238, 0.95);
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 2rem 0;
+        clip-path: circle(0px at 90% -10%);
+        transition: all 0.5s ease-out;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .nav-links.active {
+        clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links a {
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .nav-links a:hover {
+        color: var(--accent-color);
+    }
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Responsive Locations Grid */
